@@ -6,11 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.waitUtility;
+
 import java.time.Duration;
 
 public class LoginPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
+	waitUtility newWait= new waitUtility();
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -46,7 +50,8 @@ public class LoginPage {
 	}
 
 	public HomePage clickLoginButton() {
-		wait.until(ExpectedConditions.elementToBeClickable(login)).click();
+		newWait.waitUntilElementToBeClickable(driver, login);
+		login.click();
 		return new HomePage(driver);
 	}
 
