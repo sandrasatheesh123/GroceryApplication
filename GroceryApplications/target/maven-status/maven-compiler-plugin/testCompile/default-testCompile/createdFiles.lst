@@ -1,0 +1,7 @@
+testscript\ManageNewsTestCase.class
+automationTestCase\TestngBase.class
+reportGeneration\Listeners.class
+testscript\LoginTestCase.class
+testscript\HomeTestCase.class
+testscript\AdminUsersTestCase.class
+retry\Retry.class
